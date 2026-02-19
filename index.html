@@ -22,7 +22,14 @@ animation:bgmove 12s ease infinite;
 50%{background-position:100% 50%;}
 100%{background-position:0% 50%;}
 }
-
+#particles-bg{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
 /* HEADER FIX */
 header{
 padding:90px 20px 50px;
@@ -138,7 +145,7 @@ transform:rotate(180deg);
 }
 </style>
 </head>
-
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 <body>
 
 <header>
@@ -383,5 +390,34 @@ arrow.classList.add("rotate");
 </script>
 
 </body>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script>
+particlesJS("particles-bg",{
+"particles":{
+"number":{"value":60},
+"color":{"value":"#ffffff"},
+"shape":{"type":"circle"},
+"opacity":{"value":0.4},
+"size":{"value":2},
+"line_linked":{
+"enable":true,
+"distance":140,
+"color":"#ffffff",
+"opacity":0.3,
+"width":1
+},
+"move":{
+"enable":true,
+"speed":1
+}
+},
+"interactivity":{
+"events":{
+"onhover":{"enable":true,"mode":"grab"}
+}
+}
+});
+</script>
 </html>
 
